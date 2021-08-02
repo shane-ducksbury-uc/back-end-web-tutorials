@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+    httpd:
+        container_name: my-apache-app
+        ports:
+            - '8080:80'
+        volumes:
+            - './apache:/usr/local/apache2/htdocs/'
+        user: '$USER'
+        image: 'httpd:2.4'
